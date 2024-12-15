@@ -16,9 +16,6 @@ The project uses C++ and incorporates various libraries alongside Windows-specif
 - Decryption of the key using DPAPI.
 - Decoding and decrypting of saved passwords in Chrome.
 
-## Current Status
-🚧 Under development.
-
 ## Prerequisites
 - Windows OS.
 - Google Chrome.
@@ -27,7 +24,6 @@ The project uses C++ and incorporates various libraries alongside Windows-specif
 ## Dependencies and Installation
 
 ### Dependencies
-1. **nlohmann/json** for JSON parsing - [Download here](https://github.com/nlohmann/json/releases)
 2. **cppcodec** for Base64 encoding/decoding - [Download here](https://github.com/tplgy/cppcodec)
 3. **OpenSSL** for AES encryption - Typically included in most C++ development environments. If not, [download here](https://www.openssl.org/source/)
 4. **SQLiteCpp** for interacting with Chrome's SQLite databases - [Download here](https://github.com/SRombauts/SQLiteCpp)
@@ -38,12 +34,8 @@ git clone [repository URL]
 cd [repository directory]
 
 ### Install the dependencies:
-Place nlohmann/json and cppcodec in your project's include directory.
-Ensure OpenSSL and SQLiteCpp are installed and included in your project.
+Use mklink /D 3pp/\<target library\> \<source library\> in cmd.
 
-### Build and Compile
-Compile the project using the following command:
-g++ -o main.exe src/KeyExtractor.cpp -I"include" -I"[path to json include]" -I"[path to cppcodec include]" -I"[path to OpenSSL include]" -I"[path to SQLiteCpp include]" -lcrypt32
 
 ### License
 This project is under MIT license.
